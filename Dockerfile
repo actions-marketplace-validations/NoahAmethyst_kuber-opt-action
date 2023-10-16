@@ -14,5 +14,11 @@ RUN go mod download
 
 RUN go build -o kube-opt
 
+FROM alpine:3.17 AS app
+
+WORKDIR /opt
+
+COPY --from=builder /opt/kube-opt ./
+
 ENTRYPOINT ["/opt/kube-opt"]
 
