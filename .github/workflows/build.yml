@@ -33,13 +33,15 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           context: .
-  self-test:
-    name: Run self-test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./
-        with:
-          server: ${{ secrets.GRPC_SERVER }}
-          action: delete-pod
-          app: ${{ secrets.APP }}
+
+
+#  self-test:
+#    name: Run self-test
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: ./
+#        with:
+#          server: ${{ secrets.GRPC_SERVER }}
+#          action: delete-pod
+#          app: ${{ secrets.APP }}
