@@ -14,5 +14,5 @@ RUN go mod download
 
 RUN go build -o kube-opt
 
-ENTRYPOINT ["./kube-opt"]
+ENTRYPOINT ["/opt/kube-opt"]
 
