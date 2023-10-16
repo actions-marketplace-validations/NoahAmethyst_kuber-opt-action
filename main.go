@@ -17,7 +17,7 @@ func main() {
 		action_list = append(action_list, _act)
 	}
 	if len(_action) == 0 {
-		println("Must specific one action in list:%+v", action_list)
+		println(fmt.Sprintf("Must specific one action in list:%+v", action_list))
 		os.Exit(1)
 	}
 
