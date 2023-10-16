@@ -1,0 +1,32 @@
+name: 'Update Kuber Pod'
+description: 'This action update pod by delete it with specific app name.'
+author: 'Lex.Margin'
+branding:
+  icon: 'arrow-right'
+  color: 'yellow'
+  inputs:
+    action:
+      description: "The action to operate.For now only delete-pod is availiable"
+      require: true
+    server:
+      description: "KuberOperator GRPC server address"
+      required: true
+    app:
+      description: "The app name which should be deleted"
+      required: false
+    namespace:
+      description: "Namespace which pod in.Use default when empty"
+      required: false
+    pod-name:
+      description: "The pod name which should be deleted.Only valid when app not specific"
+      required: false
+outputs:
+  old-pod:
+    description: The old pod name which want to delete
+  new-pod:
+    description: The new pod name which has been updated or restarted
+  namespace:
+    description: The Namespace that operating in
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
