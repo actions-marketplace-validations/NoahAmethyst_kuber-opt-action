@@ -22,3 +22,11 @@ When you want to operate your kubernetes automatic and login to server is Inconv
 
 ## Example
 
+```yaml
+      - name: Operate Kubernetes
+        uses: NoahAmethyst/kuber-opt-action@v1.0.0
+        with:
+          server: ${{ secrets.GRPC_SERVER }}
+          action: delete-pod
+          app: ${{ secrets.APP }}
+```
