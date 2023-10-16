@@ -14,5 +14,5 @@ RUN go mod download
 
 RUN go build -o kube-opt
 
-ENTRYPOINT ["./update-pod"]
+ENTRYPOINT ["./kube-opt"]
 
