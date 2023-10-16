@@ -1,5 +1,5 @@
-name: 'Update Kuber Pod'
-description: 'This action update pod by delete it with specific app name.'
+name: 'Operate Kubernetes'
+description: 'This action help you operate kubernetes in remote server.'
 author: 'Lex.Margin'
 branding:
   icon: 'arrow-right'
